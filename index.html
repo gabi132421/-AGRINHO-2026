@@ -3,278 +3,795 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roteiro: Agro Forte, Futuro Sustentável</title>
-    <style>
-        /* Estilos Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f5;
-            color: #2c3e50;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            border-bottom: 3px solid #2d6a4f;
-            padding-bottom: 20px;
-        }
-
-        header h1 {
-            color: #1b4332;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #52b788;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* Estrutura dos Slides */
-        .slide {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
-
-        .slide-header {
-            background-color: #2d6a4f;
-            color: #ffffff;
-            padding: 20px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .slide-header h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .slide-number {
-            background: #40916c;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        .slide-body {
-            padding: 30px;
-        }
-
-        .meta-item {
-            margin-bottom: 15px;
-        }
-
-        .meta-label {
-            font-weight: bold;
-            color: #1b4332;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Cores Especiais para Transições */
-        .slide.transition .slide-header {
-            background-color: #1b4332;
-        }
-        .slide.transition .slide-number {
-            background: #2d6a4f;
-        }
-
-        /* Elementos Visuais Simulados */
-        .visual-preview {
-            background: #f8f9fa;
-            border-left: 4px solid #52b788;
-            padding: 15px;
-            border-radius: 4px;
-            font-style: italic;
-            color: #4a5568;
-            margin-top: 5px;
-        }
-
-        .speech-box {
-            background: #edf4f0;
-            border: 1px dashed #40916c;
-            padding: 15px;
-            border-radius: 8px;
-            color: #2d3748;
-            margin-top: 5px;
-            position: relative;
-        }
-
-        /* Estilo da Tabela do Slide 10 */
-        .preview-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        .preview-table th, .preview-table td {
-            border: 1px solid #cbd5e1;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .preview-table th {
-            background-color: #f1f5f9;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            header h1 { font-size: 1.8rem; }
-            .slide-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-        }
-    </style>
+    <meta name="description" content="AgroSustentável - Equilíbrio entre produção agrícola e preservação ambiental">
+    <meta name="keywords" content="agronegócio, sustentabilidade, agricultura de precisão, meio ambiente">
+    <title>AgroSustentável - Cultivando o Amanhã</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<div class="container">
-
-    <header>
-        <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Roteiro Completo de Apresentação do Site Educativo</p>
+    <!-- Navegação -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>AgroSustentável</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#producao" class="nav-link">Produção</a></li>
+                    <li><a href="#sustentabilidade" class="nav-link">Sustentabilidade</a></li>
+                    <li><a href="#desafios" class="nav-link">Desafios</a></li>
+                    <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+                    <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+                    <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <!-- Slide 1 -->
-    <div class="slide">
-        <div class="slide-header">
-            <h2>Capa</h2>
-            <span class="slide-number">Slide 1</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">
+                Agro forte, futuro sustentável
+            </h1>
+            <p class="hero-subtitle animate-fade-in-delay">
+                Equilíbrio entre produção e meio ambiente
+            </p>
+            <p class="hero-slogan animate-fade-in-delay-2">
+                "Cultivando o Amanhã: A Tecnologia a Serviço da Produtividade Sustentável"
+            </p>
+            <div class="hero-buttons animate-fade-in-delay-3">
+                <a href="#producao" class="btn btn-primary">Conheça o Agro</a>
+                <a href="#calculadora" class="btn btn-secondary">Calcule seu Impacto</a>
+            </div>
         </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-                <p><strong>Agro Forte, Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente.</strong></p>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Seção 1: Produção Agrícola -->
+    <section id="producao" class="section producao">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produção Agrícola</h2>
+                <p class="section-subtitle">O agronegócio como motor da economia brasileira</p>
             </div>
-            <div class="meta-item">
-                <span class="meta-label">Visual Sugerido:</span>
-                <p class="visual-preview">Design limpo, com tons de verde-floresta e sálvia, transmitindo a união entre tecnologia e natureza.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">% do PIB Brasileiro</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="stat-number" data-target="155">0</div>
+                    <div class="stat-label">Milhões de toneladas exportadas</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="18">0</div>
+                    <div class="stat-label">Milhões de empregos gerados</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-number" data-target="63">0</div>
+                    <div class="stat-label">Milhões de hectares cultivados</div>
+                </div>
             </div>
-            <div class="meta-item">
-                <span class="meta-label">O que falar:</span>
-                <p class="speech-box">"Olá a todos. Hoje vou apresentar o planejamento inicial do nosso site educativo. O objetivo central é responder à pergunta: Como o agronegócio pode crescer economicamente sem comprometer os recursos naturais das futuras gerações? Vamos entender a estrutura que pensamos para essa plataforma."</p>
+
+            <div class="tech-grid">
+                <h3 class="subsection-title">Tecnologias que Transformam</h3>
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-image">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <h4>Agricultura de Precisão</h4>
+                        <p>Uso de GPS, drones e sensores para otimizar a aplicação de insumos e aumentar a produtividade.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> Mapeamento digital</li>
+                            <li><i class="fas fa-check"></i> Aplicação localizada</li>
+                            <li><i class="fas fa-check"></i> Redução de custos</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-image">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Irrigação Inteligente</h4>
+                        <p>Sistemas que economizam até 40% de água através de sensores de umidade e automação.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> Sensores IoT</li>
+                            <li><i class="fas fa-check"></i> Controle remoto</li>
+                            <li><i class="fas fa-check"></i> Economia hídrica</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-image">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <h4>Drones Agrícolas</h4>
+                        <p>Monitoramento em tempo real, pulverização precisa e mapeamento de áreas.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> Imagens multiespectrais</li>
+                            <li><i class="fas fa-check"></i> Pulverização automatizada</li>
+                            <li><i class="fas fa-check"></i> Análise de saúde vegetal</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>Inteligência Artificial</h4>
+                        <p>Algoritmos que preveem pragas, otimizam colheitas e auxiliam na tomada de decisões.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> Previsão de safras</li>
+                            <li><i class="fas fa-check"></i> Detecção de doenças</li>
+                            <li><i class="fas fa-check"></i> Machine Learning</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Seção 2: Sustentabilidade -->
+    <section id="sustentabilidade" class="section sustentabilidade">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sustentabilidade no Campo</h2>
+                <p class="section-subtitle">Práticas que unem produtividade e conservação ambiental</p>
+            </div>
+
+            <div class="sustain-grid">
+                <div class="sustain-card large">
+                    <div class="sustain-content">
+                        <h3>Plantio Direto</h3>
+                        <p>Técnica que preserva o solo, reduz erosão e aumenta a matéria orgânica, mantendo a palhada sobre a terra.</p>
+                        <div class="sustain-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Redução de 90% na erosão do solo</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Aumento da biodiversidade</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sequestro de carbono</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sustain-image">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                </div>
+
+                <div class="sustain-card">
+                    <div class="sustain-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Rotação de Culturas</h3>
+                    <p>Alternância de culturas para melhorar a fertilidade do solo e controlar pragas naturalmente.</p>
+                </div>
+
+                <div class="sustain-card">
+                    <div class="sustain-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>ILPF</h3>
+                    <p>Integração Lavoura-Pecuária-Floresta: sistema que combina diferentes atividades na mesma área.</p>
+                </div>
+
+                <div class="sustain-card">
+                    <div class="sustain-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Energia Solar</h3>
+                    <p>Painéis fotovoltaicos que reduzem custos e emissões de carbono nas propriedades rurais.</p>
+                </div>
+
+                <div class="sustain-card">
+                    <div class="sustain-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Biodigestores</h3>
+                    <p>Transformação de resíduos orgânicos em biogás e biofertilizantes.</p>
+                </div>
+            </div>
+
+            <!-- Galeria Interativa -->
+            <div class="gallery-section">
+                <h3 class="subsection-title">Galeria de Práticas Sustentáveis</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="energia">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Energia Solar</span>
+                        </div>
+                        <div class="gallery-placeholder solar">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="solo">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Solo Fértil</span>
+                        </div>
+                        <div class="gallery-placeholder soil">
+                            <i class="fas fa-hand-holding-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="tecnologia">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Drones</span>
+                        </div>
+                        <div class="gallery-placeholder drone">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="agua">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Irrigação</span>
+                        </div>
+                        <div class="gallery-placeholder water">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="floresta">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>ILPF</span>
+                        </div>
+                        <div class="gallery-placeholder forest">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="energia">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Eólica</span>
+                        </div>
+                        <div class="gallery-placeholder wind">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="energia">Energia</button>
+                    <button class="filter-btn" data-filter="solo">Solo</button>
+                    <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+                    <button class="filter-btn" data-filter="agua">Água</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Desafios Ambientais -->
+    <section id="desafios" class="section desafios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Desafios Ambientais</h2>
+                <p class="section-subtitle">Problemas atuais e suas consequências</p>
+            </div>
+
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon danger">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Desmatamento</h3>
+                    <p>A perda de florestas nativas para expansão agrícola compromete a biodiversidade e o ciclo da água.</p>
+                    <div class="challenge-data">
+                        <div class="data-bar">
+                            <div class="data-fill" data-percent="17"></div>
+                        </div>
+                        <span class="data-label">17% da Amazônia já desmatada</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon warning">
+                        <i class="fas fa-tint-slash"></i>
+                    </div>
+                    <h3>Uso da Água</h3>
+                    <p>A agricultura consome cerca de 70% da água doce disponível, exigindo gestão eficiente dos recursos hídricos.</p>
+                    <div class="challenge-data">
+                        <div class="data-bar">
+                            <div class="data-fill warning" data-percent="70"></div>
+                        </div>
+                        <span class="data-label">70% do consumo hídrico</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon danger">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3>Emissão de Carbono</h3>
+                    <p>O setor agropecuário é responsável por cerca de 25% das emissões de gases de efeito estufa.</p>
+                    <div class="challenge-data">
+                        <div class="data-bar">
+                            <div class="data-fill danger" data-percent="25"></div>
+                        </div>
+                        <span class="data-label">25% das emissões de GEE</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-icon warning">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Agrotóxicos</h3>
+                    <p>O uso excessivo de pesticidas contamina solo, água e afeta a saúde humana e animal.</p>
+                    <div class="challenge-data">
+                        <div class="data-bar">
+                            <div class="data-fill warning" data-percent="45"></div>
+                        </div>
+                        <span class="data-label">Brasil é líder em consumo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico Interativo -->
+            <div class="chart-section">
+                <h3 class="subsection-title">Emissões de Carbono por Setor</h3>
+                <div class="chart-container">
+                    <div class="chart-bar" data-value="25" data-label="Agropecuária">
+                        <div class="bar-fill"></div>
+                        <span class="bar-label">Agropecuária</span>
+                        <span class="bar-value">25%</span>
+                    </div>
+                    <div class="chart-bar" data-value="24" data-label="Indústria">
+                        <div class="bar-fill"></div>
+                        <span class="bar-label">Indústria</span>
+                        <span class="bar-value">24%</span>
+                    </div>
+                    <div class="chart-bar" data-value="14" data-label="Transportes">
+                        <div class="bar-fill"></div>
+                        <span class="bar-label">Transportes</span>
+                        <span class="bar-value">14%</span>
+                    </div>
+                    <div class="chart-bar" data-value="13" data-label="Energia">
+                        <div class="bar-fill"></div>
+                        <span class="bar-label">Energia</span>
+                        <span class="bar-value">13%</span>
+                    </div>
+                    <div class="chart-bar" data-value="24" data-label="Outros">
+                        <div class="bar-fill"></div>
+                        <span class="bar-label">Outros</span>
+                        <span class="bar-value">24%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Soluções e Futuro -->
+    <section id="solucoes" class="section solucoes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Soluções e Futuro</h2>
+                <p class="section-subtitle">Inovações para um agro sustentável</p>
+            </div>
+
+            <div class="solutions-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="regenerativa">Agricultura Regenerativa</button>
+                    <button class="tab-btn" data-tab="carbono">Carbono Neutro</button>
+                    <button class="tab-btn" data-tab="bioinsumos">Bioinsumos</button>
+                    <button class="tab-btn" data-tab="digital">Agricultura Digital</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="regenerativa">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Agricultura Regenerativa</h3>
+                                <p>Sistema que vai além da sustentabilidade, regenerando o solo e os ecossistemas. Práticas que aumentam a matéria orgânica, melhoram a infiltração de água e sequestram carbono da atmosfera.</p>
+                                <ul class="solution-list">
+                                    <li><i class="fas fa-check"></i> Cobertura vegetal permanente</li>
+                                    <li><i class="fas fa-check"></i> Diversificação de culturas</li>
+                                    <li><i class="fas fa-check"></i> Integração animal-vegetal</li>
+                                    <li><i class="fas fa-check"></i> Minimização de revolvimento do solo</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="carbono">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Carbono Neutro</h3>
+                                <p>Meta de equilibrar emissões e remoções de carbono através de práticas como reflorestamento, manejo sustentável e tecnologias de baixo carbono.</p>
+                                <ul class="solution-list">
+                                    <li><i class="fas fa-check"></i> Plano ABC+ (Agricultura de Baixo Carbono)</li>
+                                    <li><i class="fas fa-check"></i> Crédito de carbono</li>
+                                    <li><i class="fas fa-check"></i> Recuperação de pastagens degradadas</li>
+                                    <li><i class="fas fa-check"></i> Sistemas agroflorestais</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="bioinsumos">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Bioinsumos</h3>
+                                <p>Substituição de insumos químicos por produtos biológicos como biofertilizantes, biopesticidas e inoculantes, reduzindo impactos ambientais.</p>
+                                <ul class="solution-list">
+                                    <li><i class="fas fa-check"></i> Controle biológico de pragas</li>
+                                    <li><i class="fas fa-check"></i> Fixação biológica de nitrogênio</li>
+                                    <li><i class="fas fa-check"></i> Menor toxicidade</li>
+                                    <li><i class="fas fa-check"></i> Preservação de polinizadores</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="digital">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Agricultura Digital</h3>
+                                <p>Uso de big data, IoT, blockchain e inteligência artificial para otimizar processos, reduzir desperdícios e aumentar a rastreabilidade.</p>
+                                <ul class="solution-list">
+                                    <li><i class="fas fa-check"></i> Blockchain para rastreabilidade</li>
+                                    <li><i class="fas fa-check"></i> IoT para monitoramento em tempo real</li>
+                                    <li><i class="fas fa-check"></i> Big Data para previsões</li>
+                                    <li><i class="fas fa-check"></i> Apps de gestão agrícola</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vídeo Section -->
+            <div class="video-section">
+                <h3 class="subsection-title">Tecnologia em Ação</h3>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Assista: Inovações Tecnológicas no Campo</p>
+                        <span class="video-duration">05:30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5: Calculadora de Impacto -->
+    <section id="calculadora" class="section calculadora">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculadora de Impacto Ambiental</h2>
+                <p class="section-subtitle">Simule o impacto da sua propriedade e descubra como melhorar</p>
+            </div>
+
+            <div class="calculator-container">
+                <form class="calculator-form" id="calculatorForm">
+                    <div class="form-group">
+                        <label for="area">Área da Propriedade (hectares)</label>
+                        <input type="number" id="area" name="area" min="1" max="10000" required placeholder="Ex: 100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Atividade</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecione...</option>
+                            <option value="lavoura">Lavoura</option>
+                            <option value="pecuaria">Pecuária</option>
+                            <option value="mista">Atividade Mista</option>
+                            <option value="floresta">Floresta/Extrativismo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agua">Consumo de Água (m³/mês)</label>
+                        <input type="number" id="agua" name="agua" min="0" required placeholder="Ex: 5000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="energia">Consumo de Energia (kWh/mês)</label>
+                        <input type="number" id="energia" name="energia" min="0" required placeholder="Ex: 2000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="praticas">Práticas Sustentáveis Adotadas</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="praticas" value="plantio_direto">
+                                <span>Plantio Direto</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="praticas" value="energia_solar">
+                                <span>Energia Solar</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="praticas" value="irrigacao_inteligente">
+                                <span>Irrigação Inteligente</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="praticas" value="ilpf">
+                                <span>ILPF</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="praticas" value="bioinsumos">
+                                <span>Bioinsumos</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-calculator"></i> Calcular Impacto
+                    </button>
+                </form>
+
+                <div class="calculator-result" id="calculatorResult" style="display: none;">
+                    <h3>Resultado da Simulação</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="result-value" id="waterImpact">0</div>
+                            <div class="result-label">Pegada Hídrica (m³/ano)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="result-value" id="carbonImpact">0</div>
+                            <div class="result-label">Emissão de CO₂ (ton/ano)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="result-value" id="sustainabilityScore">0</div>
+                            <div class="result-label">Índice de Sustentabilidade</div>
+                        </div>
+                    </div>
+                    <div class="result-message" id="resultMessage"></div>
+                    <div class="result-recommendations" id="resultRecommendations"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 6: Quiz de Sustentabilidade -->
+    <section id="quiz" class="section quiz">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quiz de Sustentabilidade</h2>
+                <p class="section-subtitle">Teste seus conhecimentos sobre agro sustentável</p>
+            </div>
+
+            <div class="quiz-container">
+                <div class="quiz-start" id="quizStart">
+                    <i class="fas fa-question-circle quiz-icon"></i>
+                    <h3>Pronto para o desafio?</h3>
+                    <p>Responda 10 perguntas sobre sustentabilidade no agronegócio e descubra seu nível de conhecimento!</p>
+                    <button class="btn btn-primary btn-large" id="startQuiz">
+                        <i class="fas fa-play"></i> Iniciar Quiz
+                    </button>
+                </div>
+
+                <div class="quiz-questions" id="quizQuestions" style="display: none;">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text">Questão <span id="currentQuestion">1</span> de <span id="totalQuestions">10</span></span>
+                    </div>
+
+                    <div class="question-card" id="questionCard">
+                        <h4 class="question-text" id="questionText"></h4>
+                        <div class="answers-grid" id="answersGrid"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-result" id="quizResult" style="display: none;">
+                    <div class="result-header">
+                        <i class="fas fa-trophy result-icon"></i>
+                        <h3>Quiz Concluído!</h3>
+                    </div>
+                    <div class="result-score">
+                        <div class="score-circle">
+                            <span id="scoreValue">0</span>
+                            <span class="score-max">/ 100</span>
+                        </div>
+                        <p id="scoreMessage"></p>
+                    </div>
+                    <div class="result-details" id="resultDetails"></div>
+                    <button class="btn btn-primary" id="restartQuiz">
+                        <i class="fas fa-redo"></i> Refazer Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 7: Contato -->
+    <section id="contato" class="section contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Junte-se a nós na construção de um futuro sustentável</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Vamos conversar?</h3>
+                    <p>Tem dúvidas sobre sustentabilidade no agro? Quer compartilhar experiências ou sugerir melhorias? Entre em contato conosco!</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail</strong>
+                                <span>contato@agrosustentavel.com.br</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefone</strong>
+                                <span>(11) 99999-9999</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Localização</strong>
+                                <span>Brasil - Campo e Cidade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="parceria">Parceria</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Sua mensagem..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <span>Quero receber newsletter com dicas de sustentabilidade</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>AgroSustentável</span>
+                    </div>
+                    <p>Promovendo o equilíbrio entre produção agrícola e preservação ambiental para um futuro sustentável.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#producao">Produção</a></li>
+                        <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                        <li><a href="#desafios">Desafios</a></li>
+                        <li><a href="#solucoes">Soluções</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Ferramentas</h4>
+                    <ul>
+                        <li><a href="#calculadora">Calculadora</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba novidades e dicas sustentáveis</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit" class="btn btn-small">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AgroSustentável. Todos os direitos reservados.</p>
+                <p class="footer-quote">"Como o agronegócio pode crescer economicamente sem comprometer os recursos naturais das futuras gerações?"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para Galeria -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="slide transition">
-        <div class="slide-header">
-            <h2>Transição – O Motor da Economia</h2>
-            <span class="slide-number">Slide 2</span>
-        </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-                <p><strong>O Motor da Economia.</strong></p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Visual Sugerido:</span>
-                <p class="visual-preview">Fundo escuro (verde-fechado) para quebrar o ritmo visual e focar a atenção do público.</p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">O que falar:</span>
-                <p class="speech-box">"Para começar, o site precisa contextualizar o leitor sobre a real importância do agronegócio. Não podemos falar em sustentabilidade sem entender o peso econômico que o setor tem hoje."</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide">
-        <div class="slide-header">
-            <h2>Dados Econômicos</h2>
-            <span class="slide-number">Slide 3</span>
-        </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-                <p><strong>Impacto no PIB Nacional.</strong></p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Visual Sugerido:</span>
-                <p class="visual-preview">Gráfico comparativo de barras mostrando o crescimento do Agro em relação a outros setores.</p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">O que falar:</span>
-                <p class="speech-box">"Na primeira seção do site, traremos dados macroeconômicos. O agronegócio representa cerca de 25% do PIB brasileiro e demonstrou um crescimento expressivo recente. Esse ponto inicial do site serve para mostrar que o agro é vital para o sustento e a economia do país."</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="slide">
-        <div class="slide-header">
-            <h2>Tecnologia no Campo</h2>
-            <span class="slide-number">Slide 4</span>
-        </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-                <p><strong>Agricultura de Precisão.</strong></p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Visual Sugerido:</span>
-                <p class="visual-preview">Layout Duas Colunas: Texto explicativo à esquerda e imagem de um drone agrícola à direita.</p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">O que falar:</span>
-                <p class="speech-box">"A virada de chave para a sustentabilidade está na tecnologia. O site vai detalhar como a agricultura de precisão — usando drones, imagens de satélite e sensores — permite mapear a lavoura. Isso significa aplicar defensivos e fertilizantes apenas onde é realmente necessário, reduzindo custos e o impacto no solo."</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 5 -->
-    <div class="slide">
-        <div class="slide-header">
-            <h2>Inovações que Preservam</h2>
-            <span class="slide-number">Slide 5</span>
-        </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-                <p><strong>Inovações que Preservam.</strong></p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Visual Sugerido:</span>
-                <p class="visual-preview">Layout em Cards: Três blocos (cards) com ícones representando: Irrigação Inteligente, Energia Limpa (Painéis Solares) e IoT (Big Data).</p>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">O que falar:</span>
-                <p class="speech-box">"Ainda na parte tecnológica do site, mostraremos soluções práticas. Destacamos a irrigação inteligente, que evita o desperdício de água usando inteligência artificial, e a transição para matrizes de energia limpa, como a solar, tornando as propriedades rurais autossuficientes e menos poluentes."</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 6 -->
-    <div class="slide">
-        <div class="slide-header">
-            <h2>Evolução das Exportações</h2>
-            <span class="slide-number">Slide 6</span>
-        </div>
-        <div class="slide-body">
-            <div class="meta-item">
-                <span class="meta-label">Título:</span>
-
+    <script src="script.js"></script>
+</body>
+</html>
